@@ -1,6 +1,6 @@
 // Function for taking input from buttons...
 function input(value) {
-  equation.innerHTML += value;
+  equation.innerHTML = equation.innerHTML + value;
 }
 
 // Function for clearing all the values from Calculator display...
@@ -37,6 +37,7 @@ function resultant(equation) {
         equationElement[i - 1] == "-" ||
         equationElement[i - 1] == "*" ||
         equationElement[i - 1] == "/" ||
+        equationElement[i - 1] == "(" ||
         equationElement[i - 1] == "*(" ||
         equationElement[i - 3] == "s" ||
         equationElement[i - 3] == "t" ||
@@ -58,6 +59,7 @@ function resultant(equation) {
         equationElement[i + 1] == "-" ||
         equationElement[i + 1] == "*" ||
         equationElement[i + 1] == "/" ||
+        equationElement[i + 1] == "(" ||
         equationElement[i + 1] == ")"
       ) {
         continue;
@@ -115,13 +117,11 @@ function resultant(equation) {
   // Error handling and showing error in display...
   try {
     result = eval(finalEquation);
-    answer.innerHTML = result.toFixed(3);
+    answer.innerHTML = result.toFixed(5);
+    console.log(finalEquation);
   } catch (error) {
-    // document.getElementById("answer").innerHTML =
-    //   "Error- Please enter a proper input";
-    answer.innerHTML = "error";
-    answer.style.color = "red";
-    display.style.border = "1px solid red";
-    display.style.backgroundColor = "#ffc3c3";
+    console.log(finalEquation);
+    document.getElementById("answer").innerHTML =
+      "Error- Please enter a proper input";
   }
 }

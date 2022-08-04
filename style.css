@@ -6,6 +6,7 @@
   left: 500px;
   padding: 20px;
   border-radius: 10px;
+  background-color: rgb(126 106 106);
 }
 #display {
   height: 50px;
@@ -13,10 +14,23 @@
   border: 1px solid black;
   border-radius: 10px;
   margin-bottom: 10px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #d1d9e0;
+  color: black;
 }
 button {
   height: 50px;
   width: 50px;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 18px;
+  border-color: black;
+}
+#allClear {
+  background-color: rgb(218, 47, 47);
+  color: white;
+}
+.math {
+  background-color: rgb(15, 68, 15);
+  color: white;
 }

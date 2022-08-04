@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
+    <title>Calculator App</title>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -14,15 +14,21 @@
     <div class="calculator">
       <div id="display">
         <div id="equation"></div>
+
+        <!-- Div for final answer start here -->
         <div id="answer"></div>
+        <!-- Div for final answer ends here -->
+
       </div>
+
+      <!-- Table containing all the Calculator Buttons-->
       <table id="table">
         <tr>
           <td><input type="checkbox" id="degreeCheck">Deg</td>
           <td><button onclick="input('(')" id="open">(</button></td>
           <td><button onclick="input(')')" id="close">)</button></td>
-          <td><button onclick="input('%')" id="percent">%</button></td>
-          <td><button onclick="input('/')" id="divide">/</button></td>
+          <td><button onclick="input('π')">π</td>
+          <td><button onclick="del(equation.innerHTML)" id="clear">C</button></td>
           <td><button onclick="allClear()" id="allClear">AC</button></td>
         </tr>
 
@@ -31,10 +37,7 @@
           <td><button onclick="input(7)" id="7">7</button></td>
           <td><button onclick="input(8)" id="8">8</button></td>
           <td><button onclick="input(9)" id="9">9</button></td>
-          <td><button onclick="input('π')">π</td>
-            <td>
-              <button onclick="del(equation.innerHTML)" id="clear">C</button>
-            </td>
+          <td><button onclick="input('/')" class="math">/</button></td>
         </tr>
 
         <tr>
@@ -42,7 +45,7 @@
           <td><button onclick="input(4)" id="4">4</button></td>
           <td><button onclick="input(5)" id="5">5</button></td>
           <td><button onclick="input(6)" id="6">6</button></td>
-          <td><button onclick="input('*')" id="mul">*</button></td>
+          <td><button onclick="input('*')" class="math">*</button></td>
         </tr>
 
         <tr>
@@ -50,21 +53,18 @@
           <td><button onclick="input(1)" id="1">1</button></td>
           <td><button onclick="input(2)" id="2">2</button></td>
           <td><button onclick="input(3)" id="3">3</button></td>
-          <td><button onclick="input('-')" id="sub">-</button></td>
+          <td><button onclick="input('-')" class="math">-</button></td>
         </tr>
 
         <tr>
           <td><button onclick="input('tan(')" id="tan">tan</button></td>
           <td><button onclick="input(0)" id="0">0</button></td>
           <td><button onclick="input('.')" id="dot">.</button></td>
-          <td>
-            <button onclick="resultant(equation.innerHTML)" id="equals">
-              =
-            </button>
-          </td>
-          <td><button onclick="input('+')" id="add">+</button></td>
+          <td><button onclick="resultant(equation.innerHTML)" id="equals">=</button></td>
+          <td><button onclick="input('+')" class="math">+</button></td>
         </tr>
       </table>
+      <!-- Table ends here -->
     </div>
     <!-- Calculator end here -->
 
